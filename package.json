@@ -1,0 +1,38 @@
+{
+  "name": "@saanuregh/test-gh-npm-package",
+  "version": "1.0.0",
+  "repository": "https://github.com/saanuregh/test-gh-npm-package.git",
+  "author": "Saanu Reghunadh <saanu09xs@gmail.com>",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {}
+  },
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
